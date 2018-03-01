@@ -8,39 +8,39 @@
 // Overrides: atom/static/variables/ui-variables.less
 
 // Oxygen theme colors
-@oxygen-accent-color:  #2896f4;
+@oxygen-accent-color:  rgb(201, 148, 45);
 @oxygen-accent-color-darker:  #456480;
-@oxygen-glow-color:    rgba(0, 0, 0, 0.6);
+@oxygen-glow-color:    rgba(0, 0, 0, 0.54);
 @oxygen-glow-radius:   20px;
 @oxygen-hover-glow-radius:   12px;
 
 // Oxygen Buttons and button-like widgets
-@oxygen-button-base-color:    #2a323d;
+@oxygen-button-base-color:    #353d41;
 @oxygen-button-radius:        5px;
 @oxygen-button-border:        linear-gradient(#02050c, #00030a);
 @oxygen-colored-button-text-color: white;
-@oxygen-form-widget-base-color: #1da175;
+@oxygen-form-widget-base-color: #f99827;
 
 .render-button-background(@baseColor) {
     background: linear-gradient(to Bottom,
-                                lighten(@baseColor, 6%) 30%,
+                                lighten(@baseColor, 3%) 30%,
                                 @baseColor 100%);
 }
 
 // Oxygen tabs
-@oxygen-tab-background-color: #38434e;
-@oxygen-tab-selected-background-color: #495c71;
-@oxygen-tab-background:  linear-gradient(to Bottom,
-                                         @oxygen-tab-background-color 30%,
-                                         darken(@oxygen-tab-background-color, 6%) 100%);
-@oxygen-tab-selected-background: linear-gradient(to bottom,
-                                         @oxygen-tab-selected-background-color 30%,
-                                         darken(@oxygen-tab-selected-background-color, 6%) 100%);
+@oxygen-tab-background-color: #373737;
+@oxygen-tab-bottom-line-color: #484848;
+@oxygen-tab-selected-background-color: @oxygen-tab-bottom-line-color;
 @oxygen-tab-shadow-color:     rgba(0, 0, 0, 0.15);
 
+// Oxygen lists and trees
+@oxygen-tree-header-background-color: #4c5f71;
+@oxygen-tree-header-collapsed-background-color: #3f464d;
+@oxygen-tree-background-color: rgba(31, 32, 32, 0.3);
+
 // Oxygen docks and panels
-@oxygen-panel-base-color: #272e36;
-@oxygen-panel-lighter-color: lighten(@oxygen-panel-base-color, 5%);
+@oxygen-panel-base-color: #272a2b;
+@oxygen-panel-lighter-color: #484848;
 @oxygen-dock-border-color: @oxygen-panel-base-color;
 
 // Oxygen Animations
@@ -55,8 +55,8 @@
 // Text Colors
 @text-color:           #cacaca;
 @text-color-subtle:    hsl(0,0%,50%);
-@text-color-highlight: #8dbeec;
-@text-color-selected:  #1da175;
+@text-color-highlight: #f99827;
+@text-color-selected:  #f99827;
 
 @text-color-info:    hsl(219,  79%, 66%);
 @text-color-success: hsl(140,  44%, 62%);

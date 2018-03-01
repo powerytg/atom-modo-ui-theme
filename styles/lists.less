@@ -7,61 +7,43 @@
 
 // List Group -------------------
 .list-group {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border: 1px solid #202020;
+  border-radius: 5px;
+  background-color: #9198a0;
+
   li {
+    color: #454545;
     padding-left: @component-padding/2;
+
+    &:nth-child(even) {
+      background: #899199;
+    }
 
     // We want to highlight the background of the list items because we dont know their size.
     &.selected {
       color: @text-color-selected;
-      .render-hover-highlight();
+      .render-selected-highlight();
       &:before{ display: none; }
     }
   }
 
   li:hover {
-      .render-hover-highlight();
+    .render-hover-highlight();
   }
 }
 
 .render-hover-highlight() {
-  border: 1px solid 567089;
-  border-radius: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  background-color: #4b596c;
-  box-shadow:  0 0 5px 1px rgba(0, 0, 0, 0.6),
-               inset 0 0px 4px 1px rgba(40, 150, 244, 0.15);
+  background: #64707c;
 }
 
 .render-selected-highlight() {
-  margin-left: 4px;
-  margin-right: 4px;
-
-  .render-button-background(@oxygen-button-base-color);
-
-  // A bit of subtile border
-  border-radius: @oxygen-button-radius;
-  border-image: @oxygen-button-border;
-  border-image-slice: 1;
-
-  // Inner and outter shadows
-  box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25),   // Drop shadow
-              0px 2px 1px #f7f6f5 inset,          // Top inner stroke in white color
-              0px -1px 1px #f7f6f5 inset;         // Bottom inner stroke in dark color
+  background: #474c50;
 }
 
-// List Tree -------------------
-.list-tree {
-  color: @text-color;
-  .selected {
-    color: @text-color-selected;
-  }
-}
-
-// List tree selected item
-.list-group .selected::before,
-.list-tree .selected::before {
-  .render-hover-highlight();
+.list-group .selected::before {
+  .render-selected-highlight();
 }
 
 // Select List -------------------
@@ -80,13 +62,20 @@
   @popover-list-padding: @component-padding/2;
 
   padding: @popover-list-padding;
-  border-radius: @component-border-radius;
+  border-radius: 8px;
   background-color: @overlay-background-color;
   box-shadow: 0 2px 12px 1px @oxygen-glow-color;
 
   .list-group {
     margin-top: @popover-list-padding;
     li {
+      // Popover list are given a darker background color, because the foreground text is in light color
+      background-color: #53585e;
+
+      &:nth-child(even) {
+        background: #454a50;
+      }
+
       padding-left: @popover-list-padding;
     }
   }

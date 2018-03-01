@@ -3,26 +3,6 @@
 
 @import "buttons";
 
-// Mini text input, used in search panel and command list
-atom-text-editor[mini] {
-  outline: none;
-  border: 2px solid #6d8aa6;
-  border-radius: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-  background-color: #2b3543;
-  box-shadow:  0 0 6px 1px rgba(0, 0, 0, 0.4),
-               inset 0 0px 4px 1px rgba(40, 150, 244, 0.15);
-
-  color: @text-color-highlight;
-  min-height: 2.3em;
-
-  &.is-focused {
-    border: 2px solid #8dbeec;
-    background-color: #284865;
-  }
-}
-
 // Text input
 .input-text,
 .input-search,

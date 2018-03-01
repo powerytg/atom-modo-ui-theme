@@ -5,7 +5,6 @@
 // Used to explore and open files in the current project.
 // Overrides: atom/tree-view
 
-
 .tree-view-resizer {
   border-right: 1px solid @base-border-color;
 }
@@ -13,8 +12,97 @@
 .tree-view {
   color: @text-color;
   background-color: @tree-view-background-color;
+  padding-right: 0;
+
+  .tree-view-root {
+    margin: 0;
+    border: none;
+    padding-right: 0;
+  }
 
   .list-item.selected {
     color: @text-color-selected;
   }
+}
+
+.list-tree {
+  color: #c4c4c4;
+  border-radius: 6px;
+  background: @oxygen-tree-background-color;
+  margin-right: 4px;
+  margin-bottom: 6px;
+  padding-top: 4px;
+
+  .selected {
+    color: @text-color-selected;
+  }
+
+  li:nth-child(even) {
+    background: @oxygen-tree-background-color;
+  }
+
+  li.list-nested-item > .list-item {
+    line-height: 1.2em;
+  }
+
+  // List tree headers
+  .header {
+    display: inline-block;
+    .render-button(@oxygen-tree-header-background-color, 6px);
+
+    padding-top: 0;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    padding-right: 6px;
+    margin-bottom: 6px;
+    line-height: 1.2em;
+
+    // Hide the file type icon and reduce header font size
+    span.icon {
+      font-size: 0.8em;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .collapsed .header {
+    border-radius: 6px;
+    background: @oxygen-tree-header-collapsed-background-color;
+    margin-bottom: 4px;
+  }
+
+  &.has-collapsable-children .list-nested-item  {
+    // Expanded headers
+    & > .list-item::before {
+      display: none;
+    }
+
+    & > .list-item::after {
+      margin-left: 1em;
+      content: '\25be';
+    }
+
+    // Collapsed headers
+    &.collapsed {
+      & > .list-item::before {
+        display: none;
+      }
+
+      & > .list-item::after {
+        margin-left: 1em;
+        content: '\25b8';
+      }
+    }
+  }
+}
+
+// List tree selected item
+.list-tree .selected::before {
+  .render-selected-highlight();
+}
+
+.list-tree.has-collapsable-children li.list-item {
+  margin-left: 0;
 }
