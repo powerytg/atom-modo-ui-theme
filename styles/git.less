@@ -4,11 +4,37 @@
 
 // Used to color git status
 
-@import "buttons";
-
 .status          { color: @text-color; }
-.status-added    { color: @text-color-success; } // green
-.status-ignored  { color: @text-color-subtle; }  // faded
-.status-modified { color: @text-color-warning; } // orange
-.status-removed  { color: @text-color-error; }   // red
-.status-renamed  { color: @text-color-info; }    // blue
+.status-added {
+  span {
+    color: #ffffff;
+    background: #37a87f;
+  }
+}
+
+.status-ignored  {
+  span {
+    color: @text-color-subtle;
+    background: #212126;
+  }
+}
+
+.status-modified {
+  span {
+    color: #ffffff;
+    background: #4374be;
+  }
+}
+
+.status-removed  {
+  span {
+    color: #ffffff;
+    background: #8f465c;
+  }
+}
+.status-renamed  {
+  span {
+    color: #ffffff;
+    background: #8f9117;
+  }
+}

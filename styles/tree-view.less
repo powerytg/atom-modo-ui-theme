@@ -11,8 +11,9 @@
 
 .tree-view {
   color: @text-color;
-  background-color: @tree-view-background-color;
+  background-color: #2d3235;
   padding-right: 0;
+  padding-top: 6px;
 
   .tree-view-root {
     margin: 0;
@@ -38,9 +39,21 @@
     color: @text-color-selected;
   }
 
-  li:nth-child(even) {
-    background: @oxygen-tree-background-color;
+  li:not(.list-nested-item) {
+    span {
+      display: inline-block;
+      margin-top: 1px;
+      margin-bottom: 1px;
+      padding-left: 4px;
+      padding-right: 6px;
+      border-radius: 6px;
+      line-height: 1.8em;
+    }
   }
+
+  // li:nth-child(even) {
+  //   background: @oxygen-tree-background-color;
+  // }
 
   li.list-nested-item > .list-item {
     line-height: 1.2em;
@@ -60,6 +73,7 @@
 
     // Hide the file type icon and reduce header font size
     span.icon {
+      background: none;
       font-size: 0.8em;
 
       &:before {
@@ -101,7 +115,7 @@
 
 // List tree selected item
 .list-tree .selected::before {
-  .render-selected-highlight();
+  background-color: @oxygen-tree-selected-background-color;
 }
 
 .list-tree.has-collapsable-children li.list-item {
