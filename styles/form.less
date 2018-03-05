@@ -16,7 +16,7 @@
 // Radio Buttons and checkboxes
 .input-radio,
 .input-checkbox {
-  .render-button(@oxygen-form-widget-base-color, @oxygen-button-radius);
+  .render-button(@form-widget-base-color, @button-radius);
 
   &:before, &:after {
     background-color: #293f38;
@@ -47,7 +47,7 @@
   }
 
   &:checked:before {
-    background-color: @oxygen-form-widget-base-color;
+    background-color: @form-widget-base-color;
   }
 }
 
@@ -64,7 +64,7 @@
     -webkit-appearance: none;
     background-clip: content-box;
 
-    .render-button(@oxygen-form-widget-base-color, 50%);
+    .render-button(@form-widget-base-color, 50%);
   }
 }
 
@@ -81,5 +81,5 @@
 
 .render-select-control() {
   outline: none;
-  .render-button(@oxygen-button-base-color, 6px);
+  .render-button(@button-background-color, 6px);
 }
