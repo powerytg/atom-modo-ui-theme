@@ -1,21 +1,21 @@
 {
-  "name": "atom-modo-ui",
+  "name": "night-owl-ui",
   "theme": "ui",
   "version": "0.0.0",
-  "description": "Dark and smooth theme, inspired by Modo",
+  "description": "Dark, pleasant and smooth theme, highly optimized for long coding nights",
   "keywords": [
     "ui",
     "theme",
-    "smoke",
-    "blue",
+    "night",
     "dark",
     "smooth",
-    "kde",
-    "linux",
+    "owl",
+    "color",
     "clean",
-    "plasma"
+    "grey",
+    "tone"
   ],
-  "repository": "https://github.com/powerytg/atom-modo-ui-theme",
+  "repository": "https://github.com/powerytg/atom-night-owl-ui-theme",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
