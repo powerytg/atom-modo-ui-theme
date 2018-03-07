@@ -1,6 +1,7 @@
-# Smoke UI Theme
+# NightOwl UI
 
-A dark, smokey and smooth theme, featuring a elegant color scheme and particularly distinguishable UI elements, optimized for readability.
+A dark yet exciting UI theme, featuring highly optimized color schemes and unique design. Very suitable to use in a long, dark coding night.
+This UI theme has excellent support for Nuclide and git.
+Best to use with the NightOwl syntax theme.
 
-![Editor Screenshot](http://powerytg.org/images/atom-carbon-theme-1.jpg)
-![Settings Screenshot](http://powerytg.org/images/atom-carbon-theme-2.jpg)
+![Editor Screenshot](http://powerytg.org/images/atom-night-owl-ui.jpg)
