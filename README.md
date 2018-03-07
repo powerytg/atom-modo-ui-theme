@@ -4,4 +4,4 @@ A dark yet exciting UI theme, featuring highly optimized color schemes and uniqu
 This UI theme has excellent support for Nuclide and git.
 Best to use with the NightOwl syntax theme.
 
-![Editor Screenshot](http://powerytg.org/images/atom-night-owl-ui.jpg)
+![Screenshot](screenshots/atom-night-owl-ui.jpg "Screenshot")
